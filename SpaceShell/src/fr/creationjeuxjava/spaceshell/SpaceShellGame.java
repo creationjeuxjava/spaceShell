@@ -8,6 +8,7 @@ public class SpaceShellGame implements ApplicationListener {
 
 	@Override
 	public void create() {
+
 	}
 
 	@Override
@@ -18,7 +19,7 @@ public class SpaceShellGame implements ApplicationListener {
 	public void render() {
 		Gdx.gl.glClearColor(0, 0, 0.2f, 1);
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
-
+		Gdx.app.log("Fps ", "Running at " + Gdx.graphics.getFramesPerSecond());
 	}
 
 	@Override
@@ -31,5 +32,9 @@ public class SpaceShellGame implements ApplicationListener {
 
 	@Override
 	public void resume() {
+	}
+
+	public static void out(String s) {
+		System.out.println(s);
 	}
 }

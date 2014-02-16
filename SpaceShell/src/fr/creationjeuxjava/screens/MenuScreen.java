@@ -18,7 +18,7 @@ import fr.creationjeuxjava.spaceshell.SpaceShellGame;
 public class MenuScreen implements Screen {
 
 	SpaceShellGame game;
-	FPSLogger f = new FPSLogger();;
+	FPSLogger f = new FPSLogger();
 
 	public MenuScreen(SpaceShellGame g) {
 		game = g;

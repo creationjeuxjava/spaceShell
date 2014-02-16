@@ -11,3 +11,7 @@ Renseigner ici, le CDC fonctionnel et technique
         
         
         
+1)Ajout du SplashScreen avec le logo (done)
+2)Mise en place d'une classe Menu (done)        
+        
+        

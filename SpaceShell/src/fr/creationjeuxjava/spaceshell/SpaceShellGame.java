@@ -9,6 +9,7 @@ public class SpaceShellGame extends Game {
 	@Override
 	public void create() {
 		setScreen(new SplashScreen(this));
+
 	}
 
 }

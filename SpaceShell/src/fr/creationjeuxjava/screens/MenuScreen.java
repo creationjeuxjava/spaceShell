@@ -2,6 +2,7 @@ package fr.creationjeuxjava.screens;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.FPSLogger;
 import com.badlogic.gdx.graphics.GL10;
 
 import fr.creationjeuxjava.spaceshell.SpaceShellGame;
@@ -17,6 +18,7 @@ import fr.creationjeuxjava.spaceshell.SpaceShellGame;
 public class MenuScreen implements Screen {
 
 	SpaceShellGame game;
+	FPSLogger f = new FPSLogger();;
 
 	public MenuScreen(SpaceShellGame g) {
 		game = g;
@@ -26,6 +28,8 @@ public class MenuScreen implements Screen {
 	public void render(float delta) {
 		Gdx.gl.glClearColor(0.3f, 0.4f, 0.2f, 1);
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
+		f.log();
+
 	}
 
 	@Override
@@ -35,6 +39,7 @@ public class MenuScreen implements Screen {
 	@Override
 	public void show() {
 		Gdx.app.log("MenuScreen", "Dans le Menu");
+
 	}
 
 	@Override

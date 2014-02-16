@@ -13,5 +13,12 @@ Renseigner ici, le CDC fonctionnel et technique
         
 1)Ajout du SplashScreen avec le logo (done)
 2)Mise en place d'une classe Menu (done)        
-        
-        
+3)Factoriser en créant une classe MyAbstractScreen qui implements Screen et dispose d'un SpaceShellGame, d'un BitmapFont et SpriteBatch
+ --> Constructeur        public MyAbstractScreen(
+        SpaceShellGame game )
+    {
+        this.game = game;
+        this.font = new BitmapFont();
+        this.batch = new SpriteBatch();
+    }
+       

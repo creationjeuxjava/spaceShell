@@ -1,40 +1,14 @@
 package fr.creationjeuxjava.spaceshell;
 
-import com.badlogic.gdx.ApplicationListener;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.GL10;
+import com.badlogic.gdx.Game;
 
-public class SpaceShellGame implements ApplicationListener {
+import fr.creationjeuxjava.screens.SplashScreen;
+
+public class SpaceShellGame extends Game {
 
 	@Override
 	public void create() {
-
+		setScreen(new SplashScreen(this));
 	}
 
-	@Override
-	public void dispose() {
-	}
-
-	@Override
-	public void render() {
-		Gdx.gl.glClearColor(0, 0, 0.2f, 1);
-		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
-		Gdx.app.log("Fps ", "Running at " + Gdx.graphics.getFramesPerSecond());
-	}
-
-	@Override
-	public void resize(int width, int height) {
-	}
-
-	@Override
-	public void pause() {
-	}
-
-	@Override
-	public void resume() {
-	}
-
-	public static void out(String s) {
-		System.out.println(s);
-	}
 }

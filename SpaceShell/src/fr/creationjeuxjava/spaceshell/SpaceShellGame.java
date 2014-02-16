@@ -16,7 +16,7 @@ public class SpaceShellGame implements ApplicationListener {
 
 	@Override
 	public void render() {
-		Gdx.gl.glClearColor(1, 1, 1, 1);
+		Gdx.gl.glClearColor(0, 0, 0.2f, 1);
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 
 	}

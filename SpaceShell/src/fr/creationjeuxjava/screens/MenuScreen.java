@@ -50,11 +50,11 @@ public class MenuScreen implements Screen {
 
 		this.mMesh.setIndices(new short[] { 0, 1, 2, 2, 3, 0 });
 		this.mMesh.setVertices(new float[] {
-			-0.5f,-0.5f,0,		1,1,1,1,	0,1, 
-			0.5f,-0.5f,0,		1,1,1,1,    1,1, 
-			0.5f,0.5f,0,		1,1,1,1,	1,0,
-			-0.5f,0.5f,0,		1,1,1,1,	0,0 
-		});
+				-0.5f,-0.5f,0,		1,1,1,1,	0,1, 
+				0.5f,-0.5f,0,		1,1,1,1,    1,1, 
+				0.5f,0.5f,0,		1,1,1,1,	1,0,
+				-0.5f,0.5f,0,		1,1,1,1,	0,0 
+		}); //GOT IT
 	}
 
 	@Override

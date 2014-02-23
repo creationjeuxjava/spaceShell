@@ -1,16 +1,13 @@
 package fr.creationjeuxjava.gui;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton.TextButtonStyle;
-
-import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
-import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener.ChangeEvent;
 
 //============================================================================
 //Name        : MenuGui.java from SpaceShell
@@ -34,7 +31,7 @@ public class MenuGui {
 	Stage stage;
 	
 	public MenuGui(){		
-//		font = new BitmapFont();//fonte par défaut
+//		font = new BitmapFont();//fonte par dï¿½faut
 //		style = new TextButtonStyle();
 //		style.font = font;
 //		style.fontColor = new Color(0.2f,0.9f,0.2f,1);
@@ -68,6 +65,7 @@ public class MenuGui {
 		quitter.addListener(new ChangeListener() {
 			@Override
 			public void changed(ChangeEvent event, Actor actor) {
+				Gdx.app.log("MenuGui", "Leaving....");
 				
 				Gdx.app.exit();
 			}	
@@ -81,7 +79,7 @@ public class MenuGui {
 	}
 	
 	
-	/*** permet de dessiner à l'écran les éléments GUI ****/
+	/*** permet de dessiner ï¿½ l'ï¿½cran les ï¿½lï¿½ments GUI ****/
 	public void dessineGUI(){		
 		stage.act(Gdx.graphics.getDeltaTime());
 	    stage.draw();

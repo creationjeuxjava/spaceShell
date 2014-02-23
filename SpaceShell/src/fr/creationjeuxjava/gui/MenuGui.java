@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton.TextButtonStyle;
 
@@ -27,20 +28,25 @@ public class MenuGui {
 	TextButtonStyle style;
 	BitmapFont font;
 	
+	/**mieux avec skin de libgdx ***/
+	Skin skin;
+	
 	Stage stage;
 	
 	public MenuGui(){		
-		font = new BitmapFont();//fonte par défaut
-		style = new TextButtonStyle();
-		style.font = font;
-		style.fontColor = new Color(0.2f,0.9f,0.2f,1);
-		style.overFontColor = new Color(0.8f,0.9f,0.8f,1);
+//		font = new BitmapFont();//fonte par défaut
+//		style = new TextButtonStyle();
+//		style.font = font;
+//		style.fontColor = new Color(0.2f,0.9f,0.2f,1);
+//		style.overFontColor = new Color(0.8f,0.9f,0.8f,1);
 		
-		solo = new TextButton("SOLO",style);
+		skin = new Skin(Gdx.files.internal("skins/uiskin/uiskin.json"));
+		
+		solo = new TextButton("SOLO",skin);
 		solo.setPosition(Gdx.app.getGraphics().getWidth()/2, Gdx.app.getGraphics().getHeight()/2);
-		multijoueur = new TextButton("MULTIJOUEUR",style);
+		multijoueur = new TextButton("MULTIJOUEUR",skin);
 		multijoueur.setPosition(Gdx.app.getGraphics().getWidth()/2, Gdx.app.getGraphics().getHeight()/2 -30);
-		quitter = new TextButton("QUITTER",style);
+		quitter = new TextButton("QUITTER",skin);
 		quitter.setPosition(Gdx.app.getGraphics().getWidth()/2, Gdx.app.getGraphics().getHeight()/2 -60);
 		
 		

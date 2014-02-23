@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.Mesh;
 import com.badlogic.gdx.graphics.VertexAttribute;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 
+import fr.creationjeuxjava.gui.MenuGui;
 import fr.creationjeuxjava.spaceshell.SpaceShellGame;
 
 //============================================================================
@@ -25,6 +26,9 @@ public class MenuScreen implements Screen {
 	FPSLogger f = new FPSLogger();
 	private ShaderProgram mShaderProgram;
 	private Mesh mMesh;
+	
+	/*** pour GUI ***/
+	MenuGui gui;
 
 	public MenuScreen(SpaceShellGame g) {
 		game = g;
@@ -42,6 +46,8 @@ public class MenuScreen implements Screen {
 		} else {
 			this.mMesh.render(GL10.GL_TRIANGLES);
 		}
+		
+		gui.dessineGUI();
 
 	}
 
@@ -66,6 +72,7 @@ public class MenuScreen implements Screen {
 		Gdx.app.log("MenuScreen", "Dans le Menu");
 		this.createShaderProgram();
 		this.createMesh();
+		gui = new MenuGui();
 
 	}
 

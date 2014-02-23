@@ -79,8 +79,8 @@ public class MenuGui {
 	}
 	
 	
-	/*** permet de dessiner � l'�cran les �l�ments GUI ****/
-	public void dessineGUI(){		
+	/*** permet de dessiner la gui a l'ecran****/
+	public void drawGui(){		
 		stage.act(Gdx.graphics.getDeltaTime());
 	    stage.draw();
 	}

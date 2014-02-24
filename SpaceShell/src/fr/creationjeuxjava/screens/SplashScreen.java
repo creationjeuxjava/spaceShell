@@ -62,7 +62,7 @@ public class SplashScreen implements Screen {
 
 		splashSprite = new Sprite(splashTexture);
 		splashSprite.setColor(1, 1, 1, 0);
-		splashSprite.setOrigin(splashSprite.getWidth() / 2, splashSprite.getHeight() / 2);
+		splashSprite.setOrigin(splashSprite.getWidth() / 2 + splashSprite.getWidth(), splashSprite.getHeight() / 2 + splashSprite.getHeight());
 		splashSprite.setPosition(Gdx.graphics.getWidth() / 2 - 330, Gdx.graphics.getHeight() / 2 - 180);
 
 		batch = new SpriteBatch();

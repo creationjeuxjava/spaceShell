@@ -46,7 +46,7 @@ public class SplashScreen implements Screen {
 		batch.end();
 
 		if (Gdx.input.isTouched()) {
-			game.setScreen(new MenuScreen(game));
+			game.setScreen(new OpenGLTriangleScreen(game));
 		}
 	}
 
@@ -79,13 +79,7 @@ public class SplashScreen implements Screen {
 
 		};
 
-		Tween.to(splashSprite, SpriteTween.ALPHA, 3f)
-				.target(1)
-				.ease(TweenEquations.easeInQuad)
-				.repeatYoyo(1, 0.5f)
-				.setCallback(cb)
-				.setCallbackTriggers(TweenCallback.COMPLETE)
-				.start(manager);
+		Tween.to(splashSprite, SpriteTween.ALPHA, 3f).target(1).ease(TweenEquations.easeInQuad).repeatYoyo(1, 0.5f).setCallback(cb).setCallbackTriggers(TweenCallback.COMPLETE).start(manager);
 	}
 
 	private void tweenCompleted() {
